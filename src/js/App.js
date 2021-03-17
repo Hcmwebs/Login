@@ -1,5 +1,5 @@
-import Form from './JsComponents/Form';
-import Header from './JsComponents/Header';
+import Form from './components/Form';
+import Header from './components/Header';
 
 function App() {
   return (
