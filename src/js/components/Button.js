@@ -1,11 +1,9 @@
-
-
 const Button = () => {
-  const btnPrimary = 'btnPrimary';
+  const btn = 'btnPrimary';
 
   return (
     <>
-      <button className={btnPrimary} id={btnPrimary}>
+      <button className={btn} id={btn}>
         Send
       </button>
     </>
