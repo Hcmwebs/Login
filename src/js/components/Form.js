@@ -1,19 +1,54 @@
-import Formgroup from './Formgroup';
-import Button from './Button';
+import { useState } from 'react';
 
-const Form = () => {
-  const email = 'email';
+const Form = ({ onAdd }) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const submitBtn = 'submitBtn';
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (!name) {
+      alert('Please add your fullname');
+      return;
+    }
+    if (!email) {
+      alert('Please add your email');
+      return;
+    }
+
+    onAdd({ name, email });
+    setName('');
+    setEmail('');
+  };
   return (
-    <div className='formContainer'>
-      <form action='' method='post'>
-        <Formgroup />
-<<<<<<< HEAD
-        <Formgroup label={email} input={email} />
-=======
->>>>>>> 012f32d58eb71d6c5663d07d629a167f08df9576
-        <Button />
-      </form>
-    </div>
+    <form action='' method='post' className='form' onSubmit={onSubmit}>
+      <div className='formgroup'>
+        <label>Fullname</label>
+        <input
+          type='text'
+          id='fname'
+          placeholder=' Your Fullname'
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required={true}
+        />
+      </div>
+
+      <div className='formgroup'>
+        <label>Email</label>
+        <input
+          type='text'
+          id='email'
+          placeholder='Your email address'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required={true}
+        />
+      </div>
+
+      <input type='submit' name={submitBtn} id={submitBtn} value='Send' />
+    </form>
   );
 };
 

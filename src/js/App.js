@@ -1,11 +1,17 @@
-import Form from './components/Form';
 import Header from './components/Header';
+import Form from './components/Form';
 
 function App() {
+  // submit the form
+
+  const addForm = (formData) => {
+    console.log(formData)
+
+  }
   return (
     <div className='container'>
       <Header />
-      <Form />
+      <Form onAdd ={addForm}/>
     </div>
   );
 }
