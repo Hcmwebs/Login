@@ -5,13 +5,12 @@ function App() {
   // submit the form
 
   const addForm = (formData) => {
-    console.log(formData)
-
-  }
+    console.log(formData);
+  };
   return (
     <div className='container'>
       <Header />
-      <Form onAdd ={addForm}/>
+      <Form onAdd={addForm} />
     </div>
   );
 }

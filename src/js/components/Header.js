@@ -1,9 +1,9 @@
 const Header = () => {
-  const title = 'Subscribe form';
+  const title = Subscribe;
   return (
-    <header>
+    <div>
       <h1>{title}</h1>
-    </header>
+    </div>
   );
 };
 
