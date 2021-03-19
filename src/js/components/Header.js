@@ -1,9 +1,12 @@
+import Nav from './Nav';
+
 const Header = () => {
-  const title = Subscribe;
+  const title = 'Subscribe Form';
   return (
-    <div>
+    <header>
       <h1>{title}</h1>
-    </div>
+      <Nav />
+    </header>
   );
 };
 
